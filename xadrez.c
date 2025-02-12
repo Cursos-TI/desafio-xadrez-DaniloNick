@@ -10,9 +10,10 @@ int main() {
     int moveBispo = 5;
     int moveTorre = 5;
     int moveRainha = 8;
+    int moveCavalo = 3;
     int i = 1;
 
-    printf("Qual peca vc ira mexer?\n 1.Bispo \n 2.Torre \n 3.Rainha\n");
+    printf("Qual peca vc ira mexer?\n 1.Bispo\n 2.Torre\n 3.Rainha\n 4.Cavalo\n");
     scanf("%i", &menu);
 
 
@@ -33,10 +34,23 @@ int main() {
         case 3: 
             while (i<=moveRainha) //Case da Rainha, enquanto o indice for menor que o "moveRainha", ira ser printado o movimento e seu indice.
             {
-                printf("Esquerda (%i)\n",i); //imprimindo movimentacao com indicativo de movimentacao.
+                printf("Esquerda(%i)\n",i); //imprimindo movimentacao com indicativo de movimentacao.
                 i++; //incremento do indice.
             }            
             break;
+        case 4:
+            for(i=1;i<=2;i++){  //Case do Cavalo,condicao que fara o loop for ser executado apenas para acionar o while.
+            
+                while (i<moveCavalo) //loop verifica o indice i para executar o print e quando a condicao e satisfeita, volta para o for.
+                {
+                    printf("Baixo(%i)\n",i); //imprimindo movimentacao vertical com indicativo de movimentacao.
+                    i++;
+                }
+                printf("Esquerda(%i)\n",i); //imprimindo movimentacao horizontal com indicativo de movimentacao.
+            }
+            break;
+        default:
+        printf("Escolha um opcao valida!\n"); //Mensagem indicando entrada invalida;
     }
 
     
