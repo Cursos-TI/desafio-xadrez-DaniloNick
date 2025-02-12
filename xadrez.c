@@ -18,29 +18,28 @@ int main() {
 
     switch(menu){
 
-        case 1: //Case do Bispo, enquanto a variavel "i" nao for igual ao valor de movimento do bispo, sera impresso seu movimento na diagonal.
-            while (i<=moveBispo) //condicao do loop
+        case 1: 
+            while (i<=moveBispo) //Case do Bispo, enquanto a variavel "i" nao for igual ao valor de movimento do bispo, sera impresso seu movimento na diagonal.
             {
-                printf("Cima \nDireita \n"); //imprimindo movimentacao na diagonal.
+                printf("Cima e Direita(%i)\n",i); //imprimindo movimentacao na diagonal com indicativo de movimentacao.
                 i++; //incremento do indice.
             }                          
             break;
         case 2: 
-            for(i = 1; i <= moveTorre; i++){
-                printf("Direita\n");
-            }
-            
+            for(i = 1; i <= moveTorre; i++){ //Case da Torre, enquanto o indice for menor que o "moveTorre", ira ser printado o movimento e seu indice.
+                printf("Direita(%i)\n",i); //imprimindo movimentacao com indicativo de movimentacao.
+            }            
             break;
         case 3: 
-            
+            while (i<=moveRainha) //Case da Rainha, enquanto o indice for menor que o "moveRainha", ira ser printado o movimento e seu indice.
+            {
+                printf("Esquerda (%i)\n",i); //imprimindo movimentacao com indicativo de movimentacao.
+                i++; //incremento do indice.
+            }            
             break;
     }
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
